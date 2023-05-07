@@ -1,6 +1,6 @@
 // reduce
 Array.prototype.myReduce = function(callback, initialValue) {
-    var accumulator = initialValue !== undefined ? initialValue : this[0];
+    let accumulator = initialValue !== undefined ? initialValue : this[0];
     for (let i = initialValue !== undefined ? 0 : 1; i < this.length; i++)
         accumulator = callback(accumulator, this[i], i, this);
     return accumulator;
